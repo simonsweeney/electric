@@ -1,0 +1,44 @@
+.box {
+    height: calc( 50% - 10px );
+    width:  calc( 50% - 10px );
+    background-color: black;
+    border: 1px solid white;
+    float: left;
+    position: fixed;
+
+    @include mobile {
+        display: none;
+    } 
+
+    &__bar,
+    &__rooftop {
+        text-align: right;
+        color: black;
+        right: 10px;
+    }
+    
+    &__rooftop, &__diner {
+        bottom: 10px;
+        span {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
+    
+    &__bar {
+        top: 10px;
+    }
+    &__rooftop {
+        bottom: 10px;
+    }
+    &__diner {
+        left: 10px;
+    }
+    &__club {
+        top: 10px;
+        left: 10px;
+    }
+  
+}

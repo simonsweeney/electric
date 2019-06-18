@@ -1,0 +1,431 @@
+@font-face {
+  font-family: 'Founders';
+  src: url("/fonts/FoundersGrotesk-Bold.otf");
+}
+/* line 1, scss/globals/reset.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 7, scss/globals/reset.scss */
+body {
+  font-family: "Times", serif;
+  cursor: crosshair;
+  -webkit-font-smoothing: antialiased;
+  background: black;
+}
+
+/* line 14, scss/globals/reset.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 18, scss/globals/reset.scss */
+b, h2 {
+  font-family: "Founders", sans-serif;
+  text-transform: uppercase;
+}
+
+/* line 23, scss/globals/reset.scss */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 1, scss/blocks/nav.scss */
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  /* line 1, scss/blocks/nav.scss */
+  .nav {
+    display: none;
+  }
+}
+/* line 12, scss/blocks/nav.scss */
+.nav__item {
+  position: absolute;
+  pointer-events: visible;
+  color: white;
+}
+/* line 17, scss/blocks/nav.scss */
+.nav__item--club, .nav__item--bar {
+  top: 17px;
+}
+/* line 22, scss/blocks/nav.scss */
+.nav__item--diner, .nav__item--rooftop {
+  bottom: 15px;
+}
+/* line 27, scss/blocks/nav.scss */
+.nav__item--club {
+  left: 20px;
+}
+/* line 31, scss/blocks/nav.scss */
+.nav__item--bar {
+  right: 20px;
+}
+/* line 35, scss/blocks/nav.scss */
+.nav__item--diner {
+  left: 20px;
+}
+/* line 39, scss/blocks/nav.scss */
+.nav__item--rooftop {
+  right: 20px;
+}
+
+/* line 1, scss/blocks/corner.scss */
+.corner {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 100;
+}
+@media (max-width: 768px) {
+  /* line 1, scss/blocks/corner.scss */
+  .corner {
+    position: static;
+    display: block;
+  }
+}
+/* line 13, scss/blocks/corner.scss */
+.corner span {
+  height: calc( 50% - 10px );
+  width: calc( 50% - 10px );
+  border-width: 1px;
+  border-style: solid;
+  float: left;
+  position: fixed;
+}
+@media (max-width: 768px) {
+  /* line 13, scss/blocks/corner.scss */
+  .corner span {
+    display: none;
+  }
+}
+/* line 25, scss/blocks/corner.scss */
+.corner span:nth-of-type(1) {
+  top: 10px;
+}
+/* line 26, scss/blocks/corner.scss */
+.corner span:nth-of-type(2) {
+  bottom: 10px;
+}
+/* line 27, scss/blocks/corner.scss */
+.corner span:nth-of-type(3) {
+  top: 10px;
+}
+/* line 28, scss/blocks/corner.scss */
+.corner span:nth-of-type(4) {
+  bottom: 10px;
+}
+/* line 30, scss/blocks/corner.scss */
+.corner span:nth-of-type(1), .corner span:nth-of-type(2) {
+  left: 10px;
+}
+/* line 35, scss/blocks/corner.scss */
+.corner span:nth-of-type(3), .corner span:nth-of-type(4) {
+  right: 10px;
+}
+/* line 42, scss/blocks/corner.scss */
+.corner__text {
+  width: 70%;
+  padding: 20px;
+  position: absolute;
+  line-height: 0.9;
+  font-size: 3vw;
+  color: white;
+}
+/* line 50, scss/blocks/corner.scss */
+.corner__text h2 {
+  display: none;
+}
+@media (max-width: 768px) {
+  /* line 50, scss/blocks/corner.scss */
+  .corner__text h2 {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+@media (max-height: 790px) {
+  /* line 42, scss/blocks/corner.scss */
+  .corner__text {
+    font-size: 2.5vw;
+  }
+}
+@media (max-width: 768px) {
+  /* line 42, scss/blocks/corner.scss */
+  .corner__text {
+    width: 90%;
+    position: static;
+    font-size: 5vw;
+  }
+}
+/* line 70, scss/blocks/corner.scss */
+.corner__text p {
+  margin-bottom: 1em;
+}
+/* line 76, scss/blocks/corner.scss */
+.corner__club span {
+  border-color: #FFF86E;
+}
+/* line 80, scss/blocks/corner.scss */
+.corner__club .shape {
+  border: 1px solid #FFF86E;
+  width: 100vw;
+  height: 75vh;
+  position: absolute;
+  top: 10vh;
+  transform: rotate(35deg);
+}
+@media (max-width: 768px) {
+  /* line 80, scss/blocks/corner.scss */
+  .corner__club .shape {
+    display: none;
+  }
+}
+/* line 92, scss/blocks/corner.scss */
+.corner__club .corner__text {
+  right: 0;
+  top: 0;
+  color: #FFF86E;
+}
+/* line 98, scss/blocks/corner.scss */
+.corner__club.active {
+  background-color: #8016FF;
+}
+@media (max-width: 768px) {
+  /* line 75, scss/blocks/corner.scss */
+  .corner__club {
+    background-color: #8016FF;
+  }
+}
+/* line 108, scss/blocks/corner.scss */
+.corner__bar span {
+  border-color: #FF3A00;
+}
+/* line 112, scss/blocks/corner.scss */
+.corner__bar .shape {
+  border: 1px solid #FF3A00;
+  width: 90vw;
+  height: 90vw;
+  border-radius: 90vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+@media (max-width: 768px) {
+  /* line 112, scss/blocks/corner.scss */
+  .corner__bar .shape {
+    display: none;
+  }
+}
+/* line 127, scss/blocks/corner.scss */
+.corner__bar .corner__text {
+  top: 0;
+  left: 0;
+  color: #FF3A00;
+}
+/* line 133, scss/blocks/corner.scss */
+.corner__bar.active {
+  background-color: #FFF86E;
+}
+@media (max-width: 768px) {
+  /* line 107, scss/blocks/corner.scss */
+  .corner__bar {
+    background-color: #FFF86E;
+  }
+}
+/* line 143, scss/blocks/corner.scss */
+.corner__rooftop span {
+  border-color: #99FFCF;
+}
+/* line 147, scss/blocks/corner.scss */
+.corner__rooftop .corner__text {
+  top: 0;
+  left: 0;
+  color: #99FFCF;
+}
+/* line 153, scss/blocks/corner.scss */
+.corner__rooftop.active {
+  background-color: #FF3A00;
+}
+@media (max-width: 768px) {
+  /* line 142, scss/blocks/corner.scss */
+  .corner__rooftop {
+    background-color: #FF3A00;
+  }
+}
+/* line 163, scss/blocks/corner.scss */
+.corner__diner span {
+  border-color: #8016FF;
+}
+/* line 167, scss/blocks/corner.scss */
+.corner__diner .shape {
+  border: 1px solid #8016FF;
+  width: 70vw;
+  height: 70vw;
+  position: absolute;
+  transform: rotate(45deg);
+}
+@media (max-width: 768px) {
+  /* line 167, scss/blocks/corner.scss */
+  .corner__diner .shape {
+    display: none;
+  }
+}
+/* line 178, scss/blocks/corner.scss */
+.corner__diner .corner__text {
+  top: 0;
+  right: 0;
+  color: #8016FF;
+}
+/* line 184, scss/blocks/corner.scss */
+.corner__diner.active {
+  background-color: #99FFCF;
+}
+@media (max-width: 768px) {
+  /* line 162, scss/blocks/corner.scss */
+  .corner__diner {
+    background-color: #99FFCF;
+  }
+}
+/* line 193, scss/blocks/corner.scss */
+.corner.active {
+  display: block;
+}
+
+/* line 1, scss/blocks/box.scss */
+.box {
+  height: calc( 50% - 10px );
+  width: calc( 50% - 10px );
+  background-color: black;
+  border: 1px solid white;
+  float: left;
+  position: fixed;
+}
+@media (max-width: 768px) {
+  /* line 1, scss/blocks/box.scss */
+  .box {
+    display: none;
+  }
+}
+/* line 13, scss/blocks/box.scss */
+.box__bar, .box__rooftop {
+  text-align: right;
+  color: black;
+  right: 10px;
+}
+/* line 20, scss/blocks/box.scss */
+.box__rooftop, .box__diner {
+  bottom: 10px;
+}
+/* line 22, scss/blocks/box.scss */
+.box__rooftop span, .box__diner span {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+/* line 30, scss/blocks/box.scss */
+.box__bar {
+  top: 10px;
+}
+/* line 33, scss/blocks/box.scss */
+.box__rooftop {
+  bottom: 10px;
+}
+/* line 36, scss/blocks/box.scss */
+.box__diner {
+  left: 10px;
+}
+/* line 39, scss/blocks/box.scss */
+.box__club {
+  top: 10px;
+  left: 10px;
+}
+
+/* line 1, scss/blocks/logo.scss */
+.logo {
+  position: fixed;
+  width: calc(100% - 24px);
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  z-index: 100;
+  pointer-events: none;
+}
+
+/* line 1, scss/blocks/main.scss */
+.main {
+  width: 75%;
+  left: 12.5%;
+  top: 42vh;
+  position: absolute;
+  z-index: 50;
+  color: white;
+  pointer-events: none;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  /* line 1, scss/blocks/main.scss */
+  .main {
+    position: static;
+    margin-left: 12.5%;
+    padding-top: 10vh;
+    overflow: auto;
+  }
+}
+/* line 18, scss/blocks/main.scss */
+.main img {
+  width: 30%;
+}
+@media (max-width: 768px) {
+  /* line 18, scss/blocks/main.scss */
+  .main img {
+    width: 70%;
+  }
+}
+/* line 25, scss/blocks/main.scss */
+.main__text {
+  margin-top: 4rem;
+  line-height: 0.9;
+  font-size: 3vw;
+  padding-bottom: 4rem;
+}
+/* line 31, scss/blocks/main.scss */
+.main__text p {
+  margin-bottom: 1em;
+}
+@media (max-width: 768px) {
+  /* line 25, scss/blocks/main.scss */
+  .main__text {
+    font-size: 5vw;
+  }
+}
+/* line 40, scss/blocks/main.scss */
+.main__address, .main__social {
+  width: 50%;
+  float: left;
+  line-height: 1.2;
+  font-family: "Founders", sans-serif;
+}
+/* line 47, scss/blocks/main.scss */
+.main__address a, .main__social a {
+  pointer-events: visible;
+}
+/* line 49, scss/blocks/main.scss */
+.main__address a:hover, .main__social a:hover {
+  font-family: "Times", serif;
+}
+/* line 55, scss/blocks/main.scss */
+.main__address {
+  padding-bottom: 6rem;
+}

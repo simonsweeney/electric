@@ -1,0 +1,45 @@
+.nav {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    pointer-events: none;
+    
+    @include mobile {
+        display: none;
+    }
+    
+    &__item {
+        position: absolute;
+        pointer-events: visible;
+        color: white;
+        
+        &--club, 
+        &--bar {
+            top: 17px;
+        }
+        
+        &--diner, 
+        &--rooftop {
+            bottom: 15px;
+        }
+        
+        &--club {
+            left: 20px;
+        }
+        
+        &--bar {
+            right: 20px;
+        }
+        
+        &--diner {
+            left: 20px;
+        }
+        
+        &--rooftop {
+            right: 20px;
+        }
+    }
+    
+    
+}

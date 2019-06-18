@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times", serif;
+    cursor: crosshair;
+    -webkit-font-smoothing: antialiased;
+    background: black;
+}
+
+img {
+    max-width: 100%;
+}
+
+b, h2 {
+    font-family: "Founders", sans-serif;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

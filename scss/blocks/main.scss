@@ -1,0 +1,58 @@
+.main {
+    width: 75%;
+    left: 12.5%;
+    top: 42vh;
+    position: absolute;
+    z-index: 50;
+    color: white;
+    pointer-events: none;
+    text-align: center;
+    
+    @include mobile {
+        position: static;
+        margin-left: 12.5%;
+        padding-top: 10vh;
+        overflow: auto;
+    }
+    
+    img {
+        width: 30%;      
+        @include mobile {
+            width: 70%;
+        }
+    }
+    
+    &__text {
+        margin-top: 4rem;
+        line-height: 0.9;
+        font-size: 3vw;
+        padding-bottom: 4rem; 
+        
+        p {
+            margin-bottom: 1em;
+        }
+        
+        @include mobile {
+            font-size: 5vw;
+        }
+    }
+    
+    &__address,
+    &__social {
+        width: 50%;
+        float: left;
+        line-height: 1.2;
+        font-family: "Founders", sans-serif;
+
+        a {
+            pointer-events: visible;
+            &:hover {
+                font-family: "Times", serif;
+            }
+        }
+    }
+    
+    &__address {
+        padding-bottom: 6rem; 
+    }
+}

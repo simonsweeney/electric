@@ -1,0 +1,31 @@
+/* line 1, ../scss/globals/reset.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 7, ../scss/globals/reset.scss */
+body {
+  font-family: "Times", serif;
+  cursor: crosshair;
+  -webkit-font-smoothing: antialiased;
+  background: black;
+}
+
+/* line 14, ../scss/globals/reset.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 18, ../scss/globals/reset.scss */
+b, h2 {
+  font-family: "Founders", sans-serif;
+  text-transform: uppercase;
+}
+
+/* line 23, ../scss/globals/reset.scss */
+a {
+  text-decoration: none;
+  color: inherit;
+}
